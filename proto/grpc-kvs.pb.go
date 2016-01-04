@@ -3,7 +3,7 @@
 // DO NOT EDIT!
 
 /*
-Package main is a generated protocol buffer package.
+Package proto is a generated protocol buffer package.
 
 It is generated from these files:
 	grpc-kvs.proto
@@ -19,9 +19,9 @@ It has these top-level messages:
 	RangeRequest
 	WatchRequest
 */
-package main
+package proto
 
-import proto "github.com/golang/protobuf/proto"
+import proto1 "github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 
@@ -31,7 +31,7 @@ import (
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
-var _ = proto.Marshal
+var _ = proto1.Marshal
 var _ = fmt.Errorf
 var _ = math.Inf
 
@@ -41,7 +41,7 @@ type Entry struct {
 }
 
 func (m *Entry) Reset()                    { *m = Entry{} }
-func (m *Entry) String() string            { return proto.CompactTextString(m) }
+func (m *Entry) String() string            { return proto1.CompactTextString(m) }
 func (*Entry) ProtoMessage()               {}
 func (*Entry) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{0} }
 
@@ -50,7 +50,7 @@ type GetRequest struct {
 }
 
 func (m *GetRequest) Reset()                    { *m = GetRequest{} }
-func (m *GetRequest) String() string            { return proto.CompactTextString(m) }
+func (m *GetRequest) String() string            { return proto1.CompactTextString(m) }
 func (*GetRequest) ProtoMessage()               {}
 func (*GetRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{1} }
 
@@ -59,7 +59,7 @@ type GetResponse struct {
 }
 
 func (m *GetResponse) Reset()                    { *m = GetResponse{} }
-func (m *GetResponse) String() string            { return proto.CompactTextString(m) }
+func (m *GetResponse) String() string            { return proto1.CompactTextString(m) }
 func (*GetResponse) ProtoMessage()               {}
 func (*GetResponse) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{2} }
 
@@ -69,7 +69,7 @@ type PutRequest struct {
 }
 
 func (m *PutRequest) Reset()                    { *m = PutRequest{} }
-func (m *PutRequest) String() string            { return proto.CompactTextString(m) }
+func (m *PutRequest) String() string            { return proto1.CompactTextString(m) }
 func (*PutRequest) ProtoMessage()               {}
 func (*PutRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{3} }
 
@@ -77,7 +77,7 @@ type PutResponse struct {
 }
 
 func (m *PutResponse) Reset()                    { *m = PutResponse{} }
-func (m *PutResponse) String() string            { return proto.CompactTextString(m) }
+func (m *PutResponse) String() string            { return proto1.CompactTextString(m) }
 func (*PutResponse) ProtoMessage()               {}
 func (*PutResponse) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{4} }
 
@@ -86,7 +86,7 @@ type DeleteRequest struct {
 }
 
 func (m *DeleteRequest) Reset()                    { *m = DeleteRequest{} }
-func (m *DeleteRequest) String() string            { return proto.CompactTextString(m) }
+func (m *DeleteRequest) String() string            { return proto1.CompactTextString(m) }
 func (*DeleteRequest) ProtoMessage()               {}
 func (*DeleteRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{5} }
 
@@ -94,7 +94,7 @@ type DeleteResponse struct {
 }
 
 func (m *DeleteResponse) Reset()                    { *m = DeleteResponse{} }
-func (m *DeleteResponse) String() string            { return proto.CompactTextString(m) }
+func (m *DeleteResponse) String() string            { return proto1.CompactTextString(m) }
 func (*DeleteResponse) ProtoMessage()               {}
 func (*DeleteResponse) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{6} }
 
@@ -104,7 +104,7 @@ type RangeRequest struct {
 }
 
 func (m *RangeRequest) Reset()                    { *m = RangeRequest{} }
-func (m *RangeRequest) String() string            { return proto.CompactTextString(m) }
+func (m *RangeRequest) String() string            { return proto1.CompactTextString(m) }
 func (*RangeRequest) ProtoMessage()               {}
 func (*RangeRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{7} }
 
@@ -113,20 +113,20 @@ type WatchRequest struct {
 }
 
 func (m *WatchRequest) Reset()                    { *m = WatchRequest{} }
-func (m *WatchRequest) String() string            { return proto.CompactTextString(m) }
+func (m *WatchRequest) String() string            { return proto1.CompactTextString(m) }
 func (*WatchRequest) ProtoMessage()               {}
 func (*WatchRequest) Descriptor() ([]byte, []int) { return fileDescriptor0, []int{8} }
 
 func init() {
-	proto.RegisterType((*Entry)(nil), "main.Entry")
-	proto.RegisterType((*GetRequest)(nil), "main.GetRequest")
-	proto.RegisterType((*GetResponse)(nil), "main.GetResponse")
-	proto.RegisterType((*PutRequest)(nil), "main.PutRequest")
-	proto.RegisterType((*PutResponse)(nil), "main.PutResponse")
-	proto.RegisterType((*DeleteRequest)(nil), "main.DeleteRequest")
-	proto.RegisterType((*DeleteResponse)(nil), "main.DeleteResponse")
-	proto.RegisterType((*RangeRequest)(nil), "main.RangeRequest")
-	proto.RegisterType((*WatchRequest)(nil), "main.WatchRequest")
+	proto1.RegisterType((*Entry)(nil), "proto.Entry")
+	proto1.RegisterType((*GetRequest)(nil), "proto.GetRequest")
+	proto1.RegisterType((*GetResponse)(nil), "proto.GetResponse")
+	proto1.RegisterType((*PutRequest)(nil), "proto.PutRequest")
+	proto1.RegisterType((*PutResponse)(nil), "proto.PutResponse")
+	proto1.RegisterType((*DeleteRequest)(nil), "proto.DeleteRequest")
+	proto1.RegisterType((*DeleteResponse)(nil), "proto.DeleteResponse")
+	proto1.RegisterType((*RangeRequest)(nil), "proto.RangeRequest")
+	proto1.RegisterType((*WatchRequest)(nil), "proto.WatchRequest")
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -153,7 +153,7 @@ func NewKvsClient(cc *grpc.ClientConn) KvsClient {
 
 func (c *kvsClient) Get(ctx context.Context, in *GetRequest, opts ...grpc.CallOption) (*GetResponse, error) {
 	out := new(GetResponse)
-	err := grpc.Invoke(ctx, "/main.Kvs/Get", in, out, c.cc, opts...)
+	err := grpc.Invoke(ctx, "/proto.Kvs/Get", in, out, c.cc, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -162,7 +162,7 @@ func (c *kvsClient) Get(ctx context.Context, in *GetRequest, opts ...grpc.CallOp
 
 func (c *kvsClient) Put(ctx context.Context, in *PutRequest, opts ...grpc.CallOption) (*PutResponse, error) {
 	out := new(PutResponse)
-	err := grpc.Invoke(ctx, "/main.Kvs/Put", in, out, c.cc, opts...)
+	err := grpc.Invoke(ctx, "/proto.Kvs/Put", in, out, c.cc, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -171,7 +171,7 @@ func (c *kvsClient) Put(ctx context.Context, in *PutRequest, opts ...grpc.CallOp
 
 func (c *kvsClient) Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.CallOption) (*DeleteResponse, error) {
 	out := new(DeleteResponse)
-	err := grpc.Invoke(ctx, "/main.Kvs/Delete", in, out, c.cc, opts...)
+	err := grpc.Invoke(ctx, "/proto.Kvs/Delete", in, out, c.cc, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -179,7 +179,7 @@ func (c *kvsClient) Delete(ctx context.Context, in *DeleteRequest, opts ...grpc.
 }
 
 func (c *kvsClient) Range(ctx context.Context, in *RangeRequest, opts ...grpc.CallOption) (Kvs_RangeClient, error) {
-	stream, err := grpc.NewClientStream(ctx, &_Kvs_serviceDesc.Streams[0], c.cc, "/main.Kvs/Range", opts...)
+	stream, err := grpc.NewClientStream(ctx, &_Kvs_serviceDesc.Streams[0], c.cc, "/proto.Kvs/Range", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -211,7 +211,7 @@ func (x *kvsRangeClient) Recv() (*Entry, error) {
 }
 
 func (c *kvsClient) Watch(ctx context.Context, in *WatchRequest, opts ...grpc.CallOption) (Kvs_WatchClient, error) {
-	stream, err := grpc.NewClientStream(ctx, &_Kvs_serviceDesc.Streams[1], c.cc, "/main.Kvs/Watch", opts...)
+	stream, err := grpc.NewClientStream(ctx, &_Kvs_serviceDesc.Streams[1], c.cc, "/proto.Kvs/Watch", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -335,7 +335,7 @@ func (x *kvsWatchServer) Send(m *Entry) error {
 }
 
 var _Kvs_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "main.Kvs",
+	ServiceName: "proto.Kvs",
 	HandlerType: (*KvsServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -366,24 +366,24 @@ var _Kvs_serviceDesc = grpc.ServiceDesc{
 }
 
 var fileDescriptor0 = []byte{
-	// 293 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x6c, 0x92, 0xcf, 0x52, 0x83, 0x30,
-	0x10, 0x87, 0x8b, 0x08, 0xea, 0x52, 0x10, 0xa3, 0x87, 0xca, 0x38, 0x8e, 0x13, 0x2f, 0x3d, 0x28,
-	0xe3, 0x9f, 0xf1, 0x0d, 0x74, 0x3c, 0xf4, 0xe2, 0xf4, 0xe2, 0x39, 0x76, 0xd6, 0xda, 0x69, 0x0b,
-	0x98, 0x04, 0xa6, 0x7d, 0x6f, 0x1f, 0x40, 0x48, 0x9a, 0x12, 0xb4, 0xc7, 0xec, 0x7e, 0x9b, 0x1f,
-	0xdf, 0x12, 0x88, 0xa6, 0xbc, 0x98, 0xdc, 0xce, 0x2b, 0x91, 0x16, 0x3c, 0x97, 0x39, 0xd9, 0x5f,
-	0xb2, 0x59, 0x46, 0xaf, 0xc1, 0x7b, 0xc9, 0x24, 0x5f, 0x93, 0x00, 0xdc, 0x39, 0xae, 0x07, 0xce,
-	0x95, 0x33, 0x3c, 0x22, 0x21, 0x78, 0x15, 0x5b, 0x94, 0x38, 0xd8, 0x6b, 0x8e, 0xf4, 0x1c, 0xe0,
-	0x15, 0xe5, 0x18, 0xbf, 0x4b, 0x14, 0xb2, 0x43, 0xd2, 0x0b, 0x08, 0x54, 0x4b, 0x14, 0x79, 0x26,
-	0xb0, 0x1d, 0xd4, 0xdd, 0x21, 0xc0, 0x5b, 0xb9, 0x73, 0xf0, 0x6f, 0x44, 0x08, 0x81, 0x22, 0xf5,
-	0x3d, 0xf5, 0xb5, 0xe1, 0x33, 0x2e, 0x50, 0xe2, 0xce, 0xd0, 0x18, 0x22, 0xd3, 0xdd, 0xf0, 0xf7,
-	0xd0, 0x1f, 0xb3, 0x6c, 0xba, 0xc5, 0x63, 0x38, 0x14, 0x92, 0x71, 0x39, 0xda, 0xe6, 0x1d, 0xc3,
-	0xc1, 0x92, 0xad, 0xea, 0xb3, 0x50, 0x89, 0x1e, 0xbd, 0x84, 0xfe, 0x3b, 0x93, 0x93, 0x2f, 0x33,
-	0x12, 0x81, 0x5f, 0x70, 0xfc, 0x9c, 0xad, 0xf4, 0xc0, 0xc3, 0x8f, 0x03, 0xee, 0xa8, 0x12, 0xe4,
-	0x06, 0xdc, 0xda, 0x90, 0xc4, 0x69, 0xb3, 0xaf, 0xb4, 0xdd, 0x43, 0x72, 0x62, 0x55, 0x36, 0x9f,
-	0xd1, 0x6b, 0xe8, 0xda, 0xc3, 0xd0, 0xad, 0xbc, 0xa1, 0x6d, 0xc9, 0x1e, 0x79, 0x02, 0x5f, 0x8b,
-	0x90, 0x53, 0xdd, 0xee, 0x48, 0x27, 0x67, 0xdd, 0xa2, 0x15, 0xe2, 0x29, 0x5b, 0x42, 0x34, 0x60,
-	0xab, 0x27, 0x81, 0xae, 0xa9, 0xbf, 0x4a, 0x7b, 0x77, 0x4e, 0x43, 0x2b, 0x51, 0x43, 0xdb, 0xd6,
-	0xff, 0xe8, 0x0f, 0x5f, 0xbd, 0x8e, 0xc7, 0xdf, 0x00, 0x00, 0x00, 0xff, 0xff, 0x4a, 0x85, 0x53,
-	0xdd, 0x2f, 0x02, 0x00, 0x00,
+	// 289 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x09, 0x6e, 0x88, 0x02, 0xff, 0x6c, 0x91, 0x3d, 0x4f, 0xc3, 0x30,
+	0x10, 0x86, 0x13, 0xa2, 0x04, 0xb8, 0x7c, 0x50, 0x0c, 0x48, 0x25, 0x42, 0x08, 0x85, 0xa5, 0x0b,
+	0x11, 0x1f, 0x03, 0x7f, 0x00, 0xc4, 0xd0, 0x05, 0x75, 0x61, 0x36, 0xd5, 0x51, 0x50, 0x4b, 0x12,
+	0x6c, 0x27, 0x6a, 0xff, 0x3c, 0x22, 0xb1, 0x5d, 0xc7, 0x2d, 0x9d, 0x22, 0xdf, 0x3d, 0xe7, 0x37,
+	0xcf, 0x19, 0x92, 0x19, 0xab, 0xa6, 0x37, 0xf3, 0x86, 0xe7, 0x15, 0x2b, 0x45, 0x49, 0x7c, 0xf9,
+	0xc9, 0xae, 0xc1, 0x7f, 0x2e, 0x04, 0x5b, 0x91, 0x10, 0xbc, 0x39, 0xae, 0x86, 0xee, 0x95, 0x3b,
+	0x3a, 0x24, 0x31, 0xf8, 0x0d, 0x5d, 0xd4, 0x38, 0xdc, 0xeb, 0x8e, 0xd9, 0x39, 0xc0, 0x0b, 0x8a,
+	0x09, 0xfe, 0xd4, 0xc8, 0xc5, 0x06, 0x99, 0x5d, 0x40, 0x28, 0x5b, 0xbc, 0x2a, 0x0b, 0x8e, 0xfd,
+	0xa0, 0xea, 0x8e, 0x00, 0x5e, 0xeb, 0x9d, 0x83, 0xdb, 0x11, 0x31, 0x84, 0x92, 0x54, 0xf7, 0xb4,
+	0xd7, 0xc6, 0x4f, 0xb8, 0x40, 0x81, 0x3b, 0x43, 0x07, 0x90, 0xac, 0xbb, 0x9a, 0xbf, 0x83, 0x68,
+	0x42, 0x8b, 0x99, 0xc1, 0x07, 0x70, 0xc0, 0x05, 0x65, 0x62, 0x6c, 0xf2, 0x8e, 0x60, 0xff, 0x9b,
+	0x2e, 0xdb, 0x33, 0x97, 0x89, 0x7e, 0x76, 0x09, 0xd1, 0x1b, 0x15, 0xd3, 0xcf, 0xf5, 0x48, 0x02,
+	0x41, 0xc5, 0xf0, 0xe3, 0x6b, 0xa9, 0x06, 0xee, 0x7f, 0x5d, 0xf0, 0xc6, 0x0d, 0x27, 0x39, 0x78,
+	0xad, 0x21, 0x39, 0x56, 0x7b, 0xcb, 0xfb, 0x45, 0xa4, 0xc4, 0x2e, 0xe9, 0x1f, 0x71, 0x3a, 0xbe,
+	0x35, 0x31, 0x7c, 0xef, 0x6f, 0x78, 0x5b, 0xd4, 0x21, 0x8f, 0x10, 0x28, 0x19, 0x72, 0xaa, 0xfb,
+	0x1b, 0xe6, 0xe9, 0xd9, 0x56, 0xd5, 0x0a, 0xf2, 0xa5, 0x33, 0x39, 0xd1, 0x84, 0xbd, 0x81, 0x34,
+	0xd2, 0x45, 0xf9, 0xba, 0x99, 0x73, 0xeb, 0x76, 0xbc, 0x14, 0x36, 0xbc, 0xad, 0xff, 0x9f, 0x7f,
+	0x0f, 0x64, 0xe1, 0xe1, 0x2f, 0x00, 0x00, 0xff, 0xff, 0xad, 0xbb, 0xda, 0x7a, 0x3a, 0x02, 0x00,
+	0x00,
 }

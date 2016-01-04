@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package main;
+package proto;
 
 service Kvs {
   rpc Get(GetRequest) returns (GetResponse) {}
